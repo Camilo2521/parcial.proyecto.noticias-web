@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Golos Text', sans-serif;
+} 
+body{
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    background: black;   
+}
+.fondo{ 
+    background: url('../img/pexels-markus-spiske-3970330.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.slide-container{
+    position: relative; 
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    margin: 100px 25px;
+}
+.slide-container::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.slide-container .card{
+    position: relative;
+    min-width: 200px;
+    height: 330px;
+    box-shadow: inset 5px 5px 5px rgba(224, 9, 9, 0.918),
+                inset -5px -5px 15px rgba(255, 3, 3, 0.753),  
+                5px 5px 15px rgba(97, 2, 250, 0.87),
+                -5px -5px 15px rgb(4, 41, 255);
+   border-radius: 50px;
+   margin: 30px;
+}
+
+.slide-container .card .uno{
+    transition: 0.5s;
+}
+.slide-container .card .uno.uno1{
+    position: relative;
+    background: rgb(0, 0, 0);
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    z-index: 1;
+    transform: translateY(70px);
+}
+.slide-container .card .uno.uno1 .content{
+    opacity: 0.4;
+    transition: 0.5s;
+}
+.slide-container .card:hover .uno.uno1 .content{
+    opacity: 1;
+}
+.slide-container .card .uno.uno1 .content img{
+   max-width: 200px;
+}
+
+.slide-container .card:hover .uno.uno1{
+    transform: translateY(0);
+}
+.slide-container .card .dos.dos2{
+    position: relative;
+    background: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: -5px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    box-shadow: 0 1px 20px 3px rgb(0, 0, 0);
+    transform: translateY(-100px);
+}
+.slide-container .card:hover .dos.dos2{
+    transform: translateY(0);
+
+}
+
+.slide-content{
+    margin: 0 40px;
+}
+.slide-container .card .slide-content{
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  
+}
+.card{
+    border-radius: 25px;
+    background-color: rgba(233, 14, 14, 0.507);
+    width: 300px;
+    margin: 50px;
+    
+}
+.image-content,
+.card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 13px;
+}
+.image-content{
+    row-gap: 5px;
+}
+.card-image{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    padding: 3px;
+}
+.card-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.card-image .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid blue;
+}
+
+.banner{
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    color: aliceblue; 
+    text-align: center;
+  }
+.name{
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+} 
+.description{
+    font-size: 12px;
+    color: azure;
+    text-align: center;
+}
+
+.button{
+ border: none;
+ font-size: 16px;
+ color: azure;
+ padding: 8px 16px;
+ background-color: blue;
+ border-radius: 6px;
+ margin: 20px;
+ cursor: pointer;
+ transition: all 0.3s ease;
+}
+.boton{
+    border: none;
+    font-size: 16px;
+    color: azure;
+    padding: 8px 16px;
+    background-color: rgb(251, 255, 1);
+    color: black;
+    border-radius: 6px;
+    margin: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.hide {
+    opacity: 0;
+}
+.show{
+    opacity: 1;
+    background: blue;
+}
+#uno{
+    padding: 10px;
+}
+#dos{
+    padding: 10px;
+}
+#tres{
+    padding: 10px;
+}
+.button:hover{
+    background: rgb(202, 255, 8); 
+    color: black;
+}
+@media screen and (max-width: 1000px) {
+    .card-wrapper {
+      width: 50%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 568px) {
+    .card-wrapper {
+        width: 100%;
+        display: block;
+        margin-bottom: 2px;
+    }
+  }
+  
+  
